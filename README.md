@@ -50,6 +50,35 @@ The dataset includes:
 
 ## Data Architecture
 
+flowchart TD
+    A["Kaggle<br/>Retail Sales CSV Dataset"]
+    B["Python and Pandas<br/>Cleaning and Transformation"]
+    C["Prepared CSV Files"]
+    
+    subgraph F["Microsoft Fabric Lakehouse"]
+        D["Bronze Layer<br/>Raw Data"]
+        E["Silver Layer<br/>Cleaned Data"]
+        G["Gold Layer<br/>Monthly Revenue"]
+        H["Gold Layer<br/>Category Revenue"]
+    end
+
+    I["SQL Analytics Endpoint"]
+    J["Power BI Semantic Model"]
+    K["Interactive Retail Sales Dashboard"]
+
+    A --> B
+    B --> C
+    C --> D
+    C --> E
+    C --> G
+    C --> H
+    E --> I
+    G --> I
+    H --> I
+    G --> J
+    H --> J
+    J --> K
+
 The project implements the Medallion Architecture.
 
 ### Bronze Layer – Raw Data
