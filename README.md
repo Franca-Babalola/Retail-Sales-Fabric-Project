@@ -50,16 +50,20 @@ The dataset includes:
 
 ## Data Architecture
 
+
+### Data Architecture
+
+```mermaid
 flowchart TD
-    A["Kaggle<br/>Retail Sales CSV Dataset"]
-    B["Python and Pandas<br/>Cleaning and Transformation"]
+    A["Kaggle - Retail Sales CSV Dataset"]
+    B["Python and Pandas - Data Cleaning"]
     C["Prepared CSV Files"]
-    
+
     subgraph F["Microsoft Fabric Lakehouse"]
-        D["Bronze Layer<br/>Raw Data"]
-        E["Silver Layer<br/>Cleaned Data"]
-        G["Gold Layer<br/>Monthly Revenue"]
-        H["Gold Layer<br/>Category Revenue"]
+        D["Bronze - Raw Data"]
+        E["Silver - Cleaned Data"]
+        G["Gold - Monthly Revenue"]
+        H["Gold - Category Revenue"]
     end
 
     I["SQL Analytics Endpoint"]
@@ -78,6 +82,8 @@ flowchart TD
     G --> J
     H --> J
     J --> K
+```
+
 
 The project implements the Medallion Architecture.
 
