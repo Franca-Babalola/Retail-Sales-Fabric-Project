@@ -131,7 +131,7 @@ ORDER BY Total_Revenue DESC;
 ```
 
 ## Power BI Dashboard
-
+![Retail Sales Performance Dashboard](images/retail-sales-dashboard.png)
 An interactive Power BI report was created using the Gold tables.
 
 The dashboard includes:
